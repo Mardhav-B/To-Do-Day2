@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>     
+    <button id="addBtn">+ Add Task</button>
+  </header>
+
+  <section class="dashboard">
+    <div class="column">
+      <h2>To Do</h2>
+      <div id="todoList" class="task-list"></div>
+    </div>
+
+    <div class="column">
+      <h2>In Progress</h2>
+      <div id="inprogressList" class="task-list"></div>
+    </div>
+
+    <div class="column">
+      <h2>Done</h2>
+      <div id="doneList" class="task-list"></div>
+    </div>
+
+    <div class="column">
+      <h2>Pending</h2>
+      <div id="pendingList" class="task-list"></div>
+    </div>
+  </section>
+
+  <!-- Add Task Modal -->
+  <div class="modal" id="modalAdd">
+    <div class="modal-box">
+      <h3>Add New Task</h3>
+      <input type="text" id="descAdd" placeholder="Task description">
+      <input type="datetime-local" id="endTimeAdd">
+      <button class="save" id="saveBtn">Save</button>
+      <button class="cancel" id="cancelAddBtn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Edit Task Modal -->
+  <div class="modal" id="modalEdit">
+    <div class="modal-box">
+      <h3>Edit Task</h3>
+      <input type="text" id="descEdit">
+      <input type="datetime-local" id="endTimeEdit">
+      <select id="statusEdit">
+        <option value="todo">To Do</option>
+        <option value="inprogress">In Progress</option>
+        <option value="done">Done</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button class="update" id="updateBtn">Update</button>
+      <button class="delete" id="deleteBtn">Delete</button>
+      <button class="cancel" id="cancelEditBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
